@@ -1,0 +1,17 @@
+C:\Projekty\AKCommander\AKCommander\bin\Debug\net6.0-windows\AKCommander.exe
+C:\Projekty\AKCommander\AKCommander\bin\Debug\net6.0-windows\AKCommander.deps.json
+C:\Projekty\AKCommander\AKCommander\bin\Debug\net6.0-windows\AKCommander.runtimeconfig.json
+C:\Projekty\AKCommander\AKCommander\bin\Debug\net6.0-windows\AKCommander.dll
+C:\Projekty\AKCommander\AKCommander\bin\Debug\net6.0-windows\AKCommander.pdb
+C:\Projekty\AKCommander\AKCommander\obj\Debug\net6.0-windows\AKCommander.csproj.AssemblyReference.cache
+C:\Projekty\AKCommander\AKCommander\obj\Debug\net6.0-windows\AKCommander.Form1.resources
+C:\Projekty\AKCommander\AKCommander\obj\Debug\net6.0-windows\AKCommander.csproj.GenerateResource.cache
+C:\Projekty\AKCommander\AKCommander\obj\Debug\net6.0-windows\AKCommander.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projekty\AKCommander\AKCommander\obj\Debug\net6.0-windows\AKCommander.AssemblyInfoInputs.cache
+C:\Projekty\AKCommander\AKCommander\obj\Debug\net6.0-windows\AKCommander.AssemblyInfo.cs
+C:\Projekty\AKCommander\AKCommander\obj\Debug\net6.0-windows\AKCommander.csproj.CoreCompileInputs.cache
+C:\Projekty\AKCommander\AKCommander\obj\Debug\net6.0-windows\AKCommander.dll
+C:\Projekty\AKCommander\AKCommander\obj\Debug\net6.0-windows\refint\AKCommander.dll
+C:\Projekty\AKCommander\AKCommander\obj\Debug\net6.0-windows\AKCommander.pdb
+C:\Projekty\AKCommander\AKCommander\obj\Debug\net6.0-windows\AKCommander.genruntimeconfig.cache
+C:\Projekty\AKCommander\AKCommander\obj\Debug\net6.0-windows\ref\AKCommander.dll
