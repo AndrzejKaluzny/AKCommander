@@ -1,2 +1,2 @@
 # AKCommander
-Odpowiednik **Total Commander**
+Odpowiednik: **Total Commander**
