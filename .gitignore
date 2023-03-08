@@ -398,3 +398,5 @@ FodyWeavers.xsd
 # JetBrains Rider
 *.sln.iml
 
+AKCommander/obj/Debug/net6.0-windows/AKCommander.GeneratedMSBuildEditorConfig.editorconfig
+AKCommander/obj/Debug/net6.0-windows/AKCommander.assets.cache
