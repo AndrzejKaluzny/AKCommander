@@ -40,13 +40,16 @@
             bZmPrzen = new Button();
             bAltF4Zakoncz = new Button();
             bUsun = new Button();
+            tableLayoutPanelCMD = new TableLayoutPanel();
+            lCMD = new Label();
+            txtCMD = new TextBox();
             tableLayoutPanelButton = new TableLayoutPanel();
             bPodglad = new Button();
             bEdycja = new Button();
-            tableLayoutPanelCMD = new TableLayoutPanel();
             menuStrip1.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
+            tableLayoutPanelCMD.SuspendLayout();
             tableLayoutPanelButton.SuspendLayout();
             SuspendLayout();
             // 
@@ -206,6 +209,46 @@
             bUsun.Text = "F8 Usuń";
             bUsun.UseVisualStyleBackColor = true;
             // 
+            // tableLayoutPanelCMD
+            // 
+            tableLayoutPanelCMD.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            tableLayoutPanelCMD.ColumnCount = 2;
+            tableLayoutPanelCMD.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 30.75F));
+            tableLayoutPanelCMD.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 69.25F));
+            tableLayoutPanelCMD.Controls.Add(lCMD, 0, 2);
+            tableLayoutPanelCMD.Controls.Add(txtCMD, 1, 2);
+            tableLayoutPanelCMD.Location = new Point(0, 372);
+            tableLayoutPanelCMD.Margin = new Padding(0);
+            tableLayoutPanelCMD.Name = "tableLayoutPanelCMD";
+            tableLayoutPanelCMD.RowCount = 3;
+            tableLayoutPanelCMD.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanelCMD.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanelCMD.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanelCMD.Size = new Size(800, 20);
+            tableLayoutPanelCMD.TabIndex = 2;
+            // 
+            // lCMD
+            // 
+            lCMD.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            lCMD.AutoSize = true;
+            lCMD.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            lCMD.Location = new Point(0, 0);
+            lCMD.Margin = new Padding(0);
+            lCMD.Name = "lCMD";
+            lCMD.Size = new Size(246, 20);
+            lCMD.TabIndex = 0;
+            lCMD.Text = "c:\\";
+            lCMD.TextAlign = ContentAlignment.MiddleRight;
+            // 
+            // txtCMD
+            // 
+            txtCMD.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            txtCMD.BorderStyle = BorderStyle.None;
+            txtCMD.Location = new Point(249, 3);
+            txtCMD.Name = "txtCMD";
+            txtCMD.Size = new Size(548, 16);
+            txtCMD.TabIndex = 1;
+            // 
             // tableLayoutPanelButton
             // 
             tableLayoutPanelButton.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
@@ -251,21 +294,6 @@
             bEdycja.Text = "F4 Edycja";
             bEdycja.UseVisualStyleBackColor = true;
             // 
-            // tableLayoutPanelCMD
-            // 
-            tableLayoutPanelCMD.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            tableLayoutPanelCMD.ColumnCount = 2;
-            tableLayoutPanelCMD.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanelCMD.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanelCMD.Location = new Point(3, 375);
-            tableLayoutPanelCMD.Name = "tableLayoutPanelCMD";
-            tableLayoutPanelCMD.RowCount = 3;
-            tableLayoutPanelCMD.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanelCMD.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanelCMD.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanelCMD.Size = new Size(794, 14);
-            tableLayoutPanelCMD.TabIndex = 2;
-            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -280,6 +308,8 @@
             menuStrip1.PerformLayout();
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel2.ResumeLayout(false);
+            tableLayoutPanelCMD.ResumeLayout(false);
+            tableLayoutPanelCMD.PerformLayout();
             tableLayoutPanelButton.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
@@ -303,5 +333,7 @@
         private Button bPodglad;
         private Button bEdycja;
         private TableLayoutPanel tableLayoutPanelCMD;
+        private Label lCMD;
+        private TextBox txtCMD;
     }
 }
