@@ -43,6 +43,13 @@
             tableLayoutPanelCMD = new TableLayoutPanel();
             lCMD = new Label();
             txtCMD = new TextBox();
+            splitContainer1 = new SplitContainer();
+            tabControll = new TabControl();
+            tabPage1 = new TabPage();
+            listViewtab1L = new ListView();
+            tabControl1 = new TabControl();
+            tabPage2 = new TabPage();
+            listViewtab1R = new ListView();
             tableLayoutPanelButton = new TableLayoutPanel();
             bPodglad = new Button();
             bEdycja = new Button();
@@ -50,6 +57,14 @@
             tableLayoutPanel1.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
             tableLayoutPanelCMD.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
+            splitContainer1.Panel1.SuspendLayout();
+            splitContainer1.Panel2.SuspendLayout();
+            splitContainer1.SuspendLayout();
+            tabControll.SuspendLayout();
+            tabPage1.SuspendLayout();
+            tabControl1.SuspendLayout();
+            tabPage2.SuspendLayout();
             tableLayoutPanelButton.SuspendLayout();
             SuspendLayout();
             // 
@@ -83,11 +98,12 @@
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tableLayoutPanel1.Controls.Add(tableLayoutPanel2, 0, 3);
             tableLayoutPanel1.Controls.Add(tableLayoutPanelCMD, 0, 2);
+            tableLayoutPanel1.Controls.Add(splitContainer1, 0, 1);
             tableLayoutPanel1.Location = new Point(0, 27);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 4;
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 7.008086F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 92.99191F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 33F));
             tableLayoutPanel1.Size = new Size(800, 425);
@@ -111,11 +127,11 @@
             tableLayoutPanel2.Controls.Add(bZmPrzen, 3, 0);
             tableLayoutPanel2.Controls.Add(bAltF4Zakoncz, 6, 0);
             tableLayoutPanel2.Controls.Add(bUsun, 5, 0);
-            tableLayoutPanel2.Location = new Point(3, 395);
+            tableLayoutPanel2.Location = new Point(3, 394);
             tableLayoutPanel2.Name = "tableLayoutPanel2";
             tableLayoutPanel2.RowCount = 1;
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel2.Size = new Size(794, 27);
+            tableLayoutPanel2.Size = new Size(794, 28);
             tableLayoutPanel2.TabIndex = 1;
             // 
             // button1
@@ -126,7 +142,7 @@
             button1.Location = new Point(0, 0);
             button1.Margin = new Padding(0);
             button1.Name = "button1";
-            button1.Size = new Size(113, 27);
+            button1.Size = new Size(113, 28);
             button1.TabIndex = 0;
             button1.Text = "F3 Podgląd";
             button1.UseVisualStyleBackColor = true;
@@ -139,7 +155,7 @@
             button2.Location = new Point(113, 0);
             button2.Margin = new Padding(0);
             button2.Name = "button2";
-            button2.Size = new Size(113, 27);
+            button2.Size = new Size(113, 28);
             button2.TabIndex = 1;
             button2.Text = "F4 Edycja";
             button2.UseVisualStyleBackColor = true;
@@ -152,7 +168,7 @@
             bUtwKat.Location = new Point(452, 0);
             bUtwKat.Margin = new Padding(0);
             bUtwKat.Name = "bUtwKat";
-            bUtwKat.Size = new Size(113, 27);
+            bUtwKat.Size = new Size(113, 28);
             bUtwKat.TabIndex = 4;
             bUtwKat.Text = "F7 UtwKat";
             bUtwKat.UseVisualStyleBackColor = true;
@@ -165,7 +181,7 @@
             bKopiuj.Location = new Point(226, 0);
             bKopiuj.Margin = new Padding(0);
             bKopiuj.Name = "bKopiuj";
-            bKopiuj.Size = new Size(113, 27);
+            bKopiuj.Size = new Size(113, 28);
             bKopiuj.TabIndex = 2;
             bKopiuj.Text = "F5 Kopiuj";
             bKopiuj.UseVisualStyleBackColor = true;
@@ -178,7 +194,7 @@
             bZmPrzen.Location = new Point(339, 0);
             bZmPrzen.Margin = new Padding(0);
             bZmPrzen.Name = "bZmPrzen";
-            bZmPrzen.Size = new Size(113, 27);
+            bZmPrzen.Size = new Size(113, 28);
             bZmPrzen.TabIndex = 3;
             bZmPrzen.Text = "F6 ZmPrzen";
             bZmPrzen.UseVisualStyleBackColor = true;
@@ -191,7 +207,7 @@
             bAltF4Zakoncz.Location = new Point(678, 0);
             bAltF4Zakoncz.Margin = new Padding(0);
             bAltF4Zakoncz.Name = "bAltF4Zakoncz";
-            bAltF4Zakoncz.Size = new Size(116, 27);
+            bAltF4Zakoncz.Size = new Size(116, 28);
             bAltF4Zakoncz.TabIndex = 6;
             bAltF4Zakoncz.Text = "Alt+F4 Zakończ";
             bAltF4Zakoncz.UseVisualStyleBackColor = true;
@@ -204,7 +220,7 @@
             bUsun.Location = new Point(565, 0);
             bUsun.Margin = new Padding(0);
             bUsun.Name = "bUsun";
-            bUsun.Size = new Size(113, 27);
+            bUsun.Size = new Size(113, 28);
             bUsun.TabIndex = 5;
             bUsun.Text = "F8 Usuń";
             bUsun.UseVisualStyleBackColor = true;
@@ -217,7 +233,7 @@
             tableLayoutPanelCMD.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 69.25F));
             tableLayoutPanelCMD.Controls.Add(lCMD, 0, 2);
             tableLayoutPanelCMD.Controls.Add(txtCMD, 1, 2);
-            tableLayoutPanelCMD.Location = new Point(0, 372);
+            tableLayoutPanelCMD.Location = new Point(0, 371);
             tableLayoutPanelCMD.Margin = new Padding(0);
             tableLayoutPanelCMD.Name = "tableLayoutPanelCMD";
             tableLayoutPanelCMD.RowCount = 3;
@@ -248,6 +264,82 @@
             txtCMD.Name = "txtCMD";
             txtCMD.Size = new Size(548, 16);
             txtCMD.TabIndex = 1;
+            // 
+            // splitContainer1
+            // 
+            splitContainer1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            splitContainer1.Location = new Point(3, 29);
+            splitContainer1.Name = "splitContainer1";
+            // 
+            // splitContainer1.Panel1
+            // 
+            splitContainer1.Panel1.Controls.Add(tabControll);
+            splitContainer1.Panel1.Paint += splitContainer1_Panel1_Paint;
+            // 
+            // splitContainer1.Panel2
+            // 
+            splitContainer1.Panel2.Controls.Add(tabControl1);
+            splitContainer1.Size = new Size(794, 339);
+            splitContainer1.SplitterDistance = 381;
+            splitContainer1.TabIndex = 3;
+            // 
+            // tabControll
+            // 
+            tabControll.Controls.Add(tabPage1);
+            tabControll.Dock = DockStyle.Fill;
+            tabControll.Location = new Point(0, 0);
+            tabControll.Name = "tabControll";
+            tabControll.SelectedIndex = 0;
+            tabControll.Size = new Size(381, 339);
+            tabControll.TabIndex = 0;
+            // 
+            // tabPage1
+            // 
+            tabPage1.Controls.Add(listViewtab1L);
+            tabPage1.Location = new Point(4, 24);
+            tabPage1.Name = "tabPage1";
+            tabPage1.Size = new Size(373, 311);
+            tabPage1.TabIndex = 0;
+            tabPage1.Text = "tabPage1";
+            tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // listViewtab1L
+            // 
+            listViewtab1L.Dock = DockStyle.Fill;
+            listViewtab1L.Location = new Point(0, 0);
+            listViewtab1L.Name = "listViewtab1L";
+            listViewtab1L.Size = new Size(373, 311);
+            listViewtab1L.TabIndex = 0;
+            listViewtab1L.UseCompatibleStateImageBehavior = false;
+            // 
+            // tabControl1
+            // 
+            tabControl1.Controls.Add(tabPage2);
+            tabControl1.Dock = DockStyle.Fill;
+            tabControl1.Location = new Point(0, 0);
+            tabControl1.Name = "tabControl1";
+            tabControl1.SelectedIndex = 0;
+            tabControl1.Size = new Size(409, 339);
+            tabControl1.TabIndex = 0;
+            // 
+            // tabPage2
+            // 
+            tabPage2.Controls.Add(listViewtab1R);
+            tabPage2.Location = new Point(4, 24);
+            tabPage2.Name = "tabPage2";
+            tabPage2.Size = new Size(401, 311);
+            tabPage2.TabIndex = 0;
+            tabPage2.Text = "tabPage2";
+            tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // listViewtab1R
+            // 
+            listViewtab1R.Dock = DockStyle.Fill;
+            listViewtab1R.Location = new Point(0, 0);
+            listViewtab1R.Name = "listViewtab1R";
+            listViewtab1R.Size = new Size(401, 311);
+            listViewtab1R.TabIndex = 0;
+            listViewtab1R.UseCompatibleStateImageBehavior = false;
             // 
             // tableLayoutPanelButton
             // 
@@ -310,6 +402,14 @@
             tableLayoutPanel2.ResumeLayout(false);
             tableLayoutPanelCMD.ResumeLayout(false);
             tableLayoutPanelCMD.PerformLayout();
+            splitContainer1.Panel1.ResumeLayout(false);
+            splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)splitContainer1).EndInit();
+            splitContainer1.ResumeLayout(false);
+            tabControll.ResumeLayout(false);
+            tabPage1.ResumeLayout(false);
+            tabControl1.ResumeLayout(false);
+            tabPage2.ResumeLayout(false);
             tableLayoutPanelButton.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
@@ -335,5 +435,12 @@
         private TableLayoutPanel tableLayoutPanelCMD;
         private Label lCMD;
         private TextBox txtCMD;
+        private SplitContainer splitContainer1;
+        private TabControl tabControll;
+        private TabControl tabControl1;
+        private TabPage tabPage1;
+        private ListView listViewtab1L;
+        private TabPage tabPage2;
+        private ListView listViewtab1R;
     }
 }

@@ -400,3 +400,8 @@ FodyWeavers.xsd
 
 AKCommander/obj/Debug/net6.0-windows/AKCommander.GeneratedMSBuildEditorConfig.editorconfig
 AKCommander/obj/Debug/net6.0-windows/AKCommander.assets.cache
+/AKCommander/bin/Debug/net6.0-windows/AKCommander.dll
+/AKCommander/bin/Debug/net6.0-windows/AKCommander.pdb
+/AKCommander/obj/Debug/net6.0-windows/AKCommander.csproj.GenerateResource.cache
+/AKCommander/obj/Debug/net6.0-windows/AKCommander.dll
+/AKCommander/obj/Debug/net6.0-windows/AKCommander.pdb
