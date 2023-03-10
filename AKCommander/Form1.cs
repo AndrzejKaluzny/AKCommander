@@ -16,5 +16,18 @@ namespace AKCommander
         {
 
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            string sciezka = @"c:\";
+            var loadDir = Wczytaj(sciezka);
+
+
+        }
+
+        private static List<LoadDir> Wczytaj(string sciezka)
+        {
+            return default;
+        }
     }
 }
