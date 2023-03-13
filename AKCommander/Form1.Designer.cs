@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             menuStrip1 = new MenuStrip();
             plikiToolStripMenuItem = new ToolStripMenuItem();
             zmieńAtrybutyToolStripMenuItem = new ToolStripMenuItem();
@@ -44,12 +45,14 @@
             lCMD = new Label();
             txtCMD = new TextBox();
             splitContainer1 = new SplitContainer();
-            tabControll = new TabControl();
+            tabControlL = new TabControl();
             tabPage1 = new TabPage();
             listViewtab1L = new ListView();
-            tabControl1 = new TabControl();
+            columnHeader2 = new ColumnHeader();
+            tabControlP = new TabControl();
             tabPage2 = new TabPage();
             listViewtab1R = new ListView();
+            columnHeader1 = new ColumnHeader();
             tableLayoutPanelButton = new TableLayoutPanel();
             bPodglad = new Button();
             bEdycja = new Button();
@@ -61,9 +64,9 @@
             splitContainer1.Panel1.SuspendLayout();
             splitContainer1.Panel2.SuspendLayout();
             splitContainer1.SuspendLayout();
-            tabControll.SuspendLayout();
+            tabControlL.SuspendLayout();
             tabPage1.SuspendLayout();
-            tabControl1.SuspendLayout();
+            tabControlP.SuspendLayout();
             tabPage2.SuspendLayout();
             tableLayoutPanelButton.SuspendLayout();
             SuspendLayout();
@@ -273,25 +276,25 @@
             // 
             // splitContainer1.Panel1
             // 
-            splitContainer1.Panel1.Controls.Add(tabControll);
+            splitContainer1.Panel1.Controls.Add(tabControlL);
             splitContainer1.Panel1.Paint += splitContainer1_Panel1_Paint;
             // 
             // splitContainer1.Panel2
             // 
-            splitContainer1.Panel2.Controls.Add(tabControl1);
+            splitContainer1.Panel2.Controls.Add(tabControlP);
             splitContainer1.Size = new Size(794, 339);
             splitContainer1.SplitterDistance = 381;
             splitContainer1.TabIndex = 3;
             // 
-            // tabControll
+            // tabControlL
             // 
-            tabControll.Controls.Add(tabPage1);
-            tabControll.Dock = DockStyle.Fill;
-            tabControll.Location = new Point(0, 0);
-            tabControll.Name = "tabControll";
-            tabControll.SelectedIndex = 0;
-            tabControll.Size = new Size(381, 339);
-            tabControll.TabIndex = 0;
+            tabControlL.Controls.Add(tabPage1);
+            tabControlL.Dock = DockStyle.Fill;
+            tabControlL.Location = new Point(0, 0);
+            tabControlL.Name = "tabControlL";
+            tabControlL.SelectedIndex = 0;
+            tabControlL.Size = new Size(381, 339);
+            tabControlL.TabIndex = 0;
             // 
             // tabPage1
             // 
@@ -305,22 +308,31 @@
             // 
             // listViewtab1L
             // 
-            listViewtab1L.Dock = DockStyle.Fill;
+            listViewtab1L.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            listViewtab1L.Columns.AddRange(new ColumnHeader[] { columnHeader2 });
+            listViewtab1L.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             listViewtab1L.Location = new Point(0, 0);
             listViewtab1L.Name = "listViewtab1L";
             listViewtab1L.Size = new Size(373, 311);
             listViewtab1L.TabIndex = 0;
             listViewtab1L.UseCompatibleStateImageBehavior = false;
+            listViewtab1L.View = View.Details;
+            listViewtab1L.MouseDoubleClick += listViewtab1L_MouseDoubleClick;
             // 
-            // tabControl1
+            // columnHeader2
             // 
-            tabControl1.Controls.Add(tabPage2);
-            tabControl1.Dock = DockStyle.Fill;
-            tabControl1.Location = new Point(0, 0);
-            tabControl1.Name = "tabControl1";
-            tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(409, 339);
-            tabControl1.TabIndex = 0;
+            columnHeader2.Text = "Nazwa";
+            columnHeader2.Width = 250;
+            // 
+            // tabControlP
+            // 
+            tabControlP.Controls.Add(tabPage2);
+            tabControlP.Dock = DockStyle.Fill;
+            tabControlP.Location = new Point(0, 0);
+            tabControlP.Name = "tabControlP";
+            tabControlP.SelectedIndex = 0;
+            tabControlP.Size = new Size(409, 339);
+            tabControlP.TabIndex = 0;
             // 
             // tabPage2
             // 
@@ -334,12 +346,20 @@
             // 
             // listViewtab1R
             // 
+            listViewtab1R.Columns.AddRange(new ColumnHeader[] { columnHeader1 });
             listViewtab1R.Dock = DockStyle.Fill;
+            listViewtab1R.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             listViewtab1R.Location = new Point(0, 0);
             listViewtab1R.Name = "listViewtab1R";
             listViewtab1R.Size = new Size(401, 311);
             listViewtab1R.TabIndex = 0;
             listViewtab1R.UseCompatibleStateImageBehavior = false;
+            listViewtab1R.View = View.Details;
+            // 
+            // columnHeader1
+            // 
+            columnHeader1.Text = "Nazwa";
+            columnHeader1.Width = 250;
             // 
             // tableLayoutPanelButton
             // 
@@ -393,6 +413,7 @@
             ClientSize = new Size(800, 450);
             Controls.Add(tableLayoutPanel1);
             Controls.Add(menuStrip1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MainMenuStrip = menuStrip1;
             Name = "Form1";
             Text = "AKCommander";
@@ -407,9 +428,9 @@
             splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)splitContainer1).EndInit();
             splitContainer1.ResumeLayout(false);
-            tabControll.ResumeLayout(false);
+            tabControlL.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
-            tabControl1.ResumeLayout(false);
+            tabControlP.ResumeLayout(false);
             tabPage2.ResumeLayout(false);
             tableLayoutPanelButton.ResumeLayout(false);
             ResumeLayout(false);
@@ -437,11 +458,13 @@
         private Label lCMD;
         private TextBox txtCMD;
         private SplitContainer splitContainer1;
-        private TabControl tabControll;
-        private TabControl tabControl1;
+        private TabControl tabControlL;
+        private TabControl tabControlP;
         private TabPage tabPage1;
         private ListView listViewtab1L;
         private TabPage tabPage2;
         private ListView listViewtab1R;
+        private ColumnHeader columnHeader2;
+        private ColumnHeader columnHeader1;
     }
 }
